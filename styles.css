@@ -199,20 +199,25 @@ nav ul {
     width: 100vw;
     box-sizing: border-box;
     border-radius: 0;
+    height: 56px; /* Set navbar height */
 }
 nav ul li {
-    margin: 5px 8px;
+    margin: 0; /* Remove margin between navbar items */
     display: flex;
     align-items: center;
+    height: 100%;
 }
 nav ul li a {
-    display: block;
-    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 24px; /* Remove vertical padding, keep horizontal */
     color: var(--nav-link, #fff);
     text-decoration: none;
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
     transition: background 0.2s;
+    box-sizing: border-box;
 }
 nav ul li a:hover {
     background-color: var(--nav-link-hover, #222);
@@ -229,10 +234,18 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0;
+}
+/* Add horizontal padding only to the logo link */
+nav ul li:first-child a {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: none !important;
+    color: inherit !important;
+    cursor: default;
 }
 /* Remove hover effect for logo link only */
-nav ul li:first-child a,
 nav ul li:first-child a:hover {
     background: none !important;
     color: inherit !important;
@@ -244,12 +257,15 @@ nav ul li:first-child a:hover {
    =========================== */
 .consultation-link {
     margin-left: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 .consultation-link .consult-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 25px;
+    height: 50px; /* Make button shorter than navbar */
     width: 200px;
     background: var(--consult-bg, #ffd700);
     position: relative;
@@ -263,6 +279,7 @@ nav ul li:first-child a:hover {
     text-decoration: none;
     font-family: 'Quicksand', sans-serif;
     transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    align-self: center;
 }
 .consult-btn span {
     color: var(--consult-color, #1a237e);
@@ -305,18 +322,24 @@ nav ul li:first-child a:hover {
    =========================== */
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: stretch;
+    height: 100%;
 }
 .dropdown .dropdown-btn {
     background: var(--nav-bg, #000);
     color: var(--nav-link, #fff);
     border: none;
-    padding: 16px 24px;
+    padding: 0 24px; /* Remove vertical padding, keep horizontal */
     font-family: 'Quicksand', sans-serif;
     font-weight: 600;
     cursor: pointer;
     border-radius: 0;
     transition: background 0.2s;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
 }
 .dropdown .dropdown-btn:hover {
     background: var(--nav-link-hover, #222);
@@ -357,7 +380,7 @@ nav ul li:first-child a:hover {
 }
 nav ul li.dropdown {
     position: relative;
-    margin: 0 8px;
+    margin: 0; /* Remove margin for dropdown as well */
     display: flex;
     align-items: center;
 }
