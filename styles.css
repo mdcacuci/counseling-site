@@ -403,7 +403,7 @@ nav ul li.dropdown {
     width: 100vw;
     min-height: 28vh;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 3vh;
     background: linear-gradient(90deg, var(--nav-bg, #004d00) 0%, var(--consult-bg, #ffd700) 100%);
     box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
     border-radius: 0 0 32px 32px;
@@ -416,7 +416,7 @@ nav ul li.dropdown {
     font-family: 'PlayfairDisplay', serif;
     font-weight: bolder;
     color: #fff;
-    background: rgba(0,0,0,0.10);
+    background: rgba(0,0,0,0.20);
     padding: 0.2em 1.2em;
     border-radius: 18px;
     box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
@@ -429,20 +429,15 @@ nav ul li.dropdown {
     margin-right: 10vw
 }
 
-#typewriter * {
-    direction: ltr; /* Keep text direction normal inside */
-}
-
 #changing-text {
-    border-right: 3px solid #fff;
     display: inline-block;
-    animation: blink 0.8s infinite;
     color: #fff;
 }
 
 .static-text {
     color: #fffbe7;
     font-weight: 400;
+    letter-spacing: normal;
 }
 
 /* Responsive adjustments */
