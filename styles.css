@@ -152,7 +152,10 @@ header {
 }
 main {
     background: var(--main-bg, #fff);
-    padding: 24px 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
     max-width: 900px;
     margin: 0 auto;
     border-radius: 8px;
@@ -166,13 +169,18 @@ footer {
 /* ===========================
    Headings & Paragraphs
    =========================== */
-h1, h2, .intro-box h2 {
+h1, h2 {
     margin: 0;
     padding: 0;
+    padding-bottom: 20px;
     box-sizing: border-box;
     font-family: 'PlayfairDisplay', serif;
 }
-.intro-box p,
+
+h2 {
+    font-size: 30px
+}
+
 p {
     font-family: 'Quicksand', sans-serif;
     font-size: 1.1em;
@@ -237,8 +245,8 @@ nav ul li a:hover {
 }
 /* Add horizontal padding only to the logo link */
 nav ul li:first-child a {
-    padding-left: 16px;
-    padding-right: 16px;
+    margin-left: 10px;
+    margin-right: 16px;
     padding-top: 0;
     padding-bottom: 0;
     background: none !important;
@@ -390,28 +398,67 @@ nav ul li.dropdown {
    =========================== */
 #typewriter-container {
     display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 28vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: linear-gradient(90deg, var(--nav-bg, #004d00) 0%, var(--consult-bg, #ffd700) 100%);
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+    border-radius: 0 0 32px 32px;
+    position: relative;
+    overflow: hidden;
 }
+
 #typewriter {
-    font-size: 50px;
-    font-family: monospace;
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    font-family: 'PlayfairDisplay', serif;
+    font-weight: bolder;
+    color: #fff;
+    background: rgba(0,0,0,0.10);
+    padding: 0.2em 1.2em;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
     white-space: nowrap;
     overflow: hidden;
-    width: fit-content;
-    margin-right: 12vw;
-    background: transparent;
+    max-width: 90vw;
+    margin: 0 0 0 auto; /* Align box to the right, so it grows left */
+    text-align: right;
+    letter-spacing: 1.5px;
+    margin-right: 10vw
 }
+
+#typewriter * {
+    direction: ltr; /* Keep text direction normal inside */
+}
+
 #changing-text {
-    border-right: 2px solid black;
+    border-right: 3px solid #fff;
     display: inline-block;
     animation: blink 0.8s infinite;
+    color: #fff;
 }
-@keyframes blink {
-    0%, 100% { border-color: transparent; }
-    50% { border-color: black; }
+
+.static-text {
+    color: #fffbe7;
+    font-weight: 400;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    #typewriter-container {
+        min-height: 18vh;
+        border-radius: 0 0 18px 18px;
+        padding: 0 0;
+    }
+    #typewriter {
+        margin: 0 auto;
+        text-align: center;
+        font-size: clamp(1.2rem, 7vw, 2.2rem);
+        padding: 0.2em 0.5em;
+        border-radius: 10px;
+    }
 }
 
 /* ===========================

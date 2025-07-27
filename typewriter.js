@@ -24,7 +24,7 @@ function type() {
   el.textContent = fullText.substring(0, currentChar);
 
   if (!isDeleting && currentChar === fullText.length) {
-    delay = 1500;
+    delay = 3000;
     isDeleting = true;
   } else if (isDeleting && currentChar === 0) {
     isDeleting = false;
