@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Consultation | Ivy College Pathway</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="q2">
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="/index.html" style="padding:0;">
+            <img src="/ICP.svg" class="logo" alt="Logo">
+          </a>
+        </li>
+        <li><a href="#">About Us</a></li>
+        <li class="dropdown">
+          <button class="dropdown-btn pulse">Services</button>
+          <div class="dropdown-content">
+            <a href="/consultation.html">Initial Consultation</a>
+            <a href="#">College Admissions</a>
+            <a href="#">Graduate Admissions</a>
+            <a href="#">Tutoring & Test Prep</a>
+          </div>
+        </li>
+        <li><a href="#">Contact</a></li>
+        <li class="consultation-link">
+          <a href="/consultation.html" class="consult-btn"><span>Free Consultation</span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Gradient Header -->
+    <div id="header-container">
+      <div id="header-center">
+        <div id="header-text">
+          <span>Schedule Your Free Consultation</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content: Consultation Form -->
+  <main>
+    <h2 class="main-title">Start Your Pathway</h2>
+    <p>Please fill out the form below, and a member of our team will be in touch shortly to schedule your free consultation.</p>
+
+    <form action="https://formsubmit.co/your@email.com" method="POST" class="consult-form">
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required />
+
+        <label for="phone">Phone Number (optional)</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" />
+
+        <label for="message">Tell Us a Bit About Yourself</label>
+        <textarea id="message" name="message" placeholder="Your message..." rows="5" required></textarea>
+
+        <label for="location">Preferred Location</label>
+        <select id="location" name="location" required>
+            <option value="" disabled selected>Select a location</option>
+            <option value="Las Vegas, Nevada">Las Vegas, Nevada</option>
+            <option value="Greenwich, Connecticut">Greenwich, Connecticut</option>
+            <option value="Other">Other</option>
+        </select>
+
+
+      <button type="submit" class="submit-btn" style="margin-top: 16px;"><span>Submit</span></button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ivy College Pathway. All rights reserved.</p>
+  </footer>
+</body>
+</html>
