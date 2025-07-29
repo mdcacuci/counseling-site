@@ -147,12 +147,6 @@ nav ul li:first-child a {
     padding-bottom: 0;
     background: none !important;
     color: inherit !important;
-    cursor: default;
-}
-nav ul li:first-child a:hover {
-    background: none !important;
-    color: inherit !important;
-    cursor: default;
 }
 
 /* ===========================
@@ -338,8 +332,8 @@ nav ul li.dropdown {
     align-items: center;
     font-size: clamp(1rem, 4vw, 3rem);
     font-family: 'PlayfairDisplay', serif;
-    font-weight: bolder;
-    color: #fff;
+    font-weight: 1000;
+    color: var(--main-bg);
     background: rgba(0,0,0,0.20);
     padding: 0.2em 1.2em;
     border-radius: 18px;
@@ -352,7 +346,7 @@ nav ul li.dropdown {
 }
 #changing-text {
     display: inline-block;
-    color: #fff;
+    color: var(--re);
     direction: ltr;
     text-align: right;
 }
