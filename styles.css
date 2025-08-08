@@ -496,6 +496,21 @@ select#location:focus {
         white-space: normal;
     }
 
+    #header-center {
+        width: 70vw;
+        min-width: 0;
+        max-width: 100vw;
+    }
+
+    #header-text {
+        font-size: clamp(1rem, 6vw, 2rem);
+        padding: 0.2em 0.5em;
+        border-radius: 10px;
+        text-align: center;
+        text-wrap: normal;
+        white-space: normal;
+    }
+
     main {
         padding: 16px 4vw;
     }
