@@ -488,7 +488,7 @@ select#location:focus {
     }
 
     #typewriter {
-        font-size: clamp(1rem, 6vw, 2rem);
+        font-size: clamp(2rem, 6vw, 3rem);
         padding: 0.2em 0.5em;
         border-radius: 10px;
         text-align: center;
@@ -503,12 +503,19 @@ select#location:focus {
     }
 
     #header-text {
-        font-size: clamp(1rem, 6vw, 2rem);
+        font-size: clamp(2rem, 6vw, 3rem);
         padding: 0.2em 0.5em;
         border-radius: 10px;
         text-align: center;
         text-wrap: normal;
         white-space: normal;
+    }
+
+    #header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        white-space: normal
     }
 
     main {
